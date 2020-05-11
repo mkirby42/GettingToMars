@@ -7,6 +7,15 @@ from dash.dependencies import Input, Output
 
 # Imports from this application
 from pages import index, first_steps
+external_stylesheets = [
+    dbc.themes.SPACELAB,
+
+    # for social media icons
+    'https://use.fontawesome.com/releases/v5.9.0/css/all.css',
+]
+meta_tags=[
+    {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
+]
 
 app = dash.Dash(__name__,
     external_stylesheets=external_stylesheets,
@@ -17,17 +26,6 @@ app.config.suppress_callback_exceptions = True
 
 app.title = 'Interplanetary Missions'
 server = app.server
-
-external_stylesheets = [
-    dbc.themes.SPACELAB,
-
-    # for social media icons
-    'https://use.fontawesome.com/releases/v5.9.0/css/all.css',
-]
-
-meta_tags=[
-    {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
-]
 
 navbar = dbc.NavbarSimple(
     brand='Interplanetary Missions',

@@ -10,8 +10,6 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 
-from GettingToMars import app
-
 
 def get_orbit(planet, day):
     planet = pk.planet.jpl_lp(planet)
